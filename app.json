@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "flood-helper",
+    "slug": "flood-helper",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "flood-helper"
+}
