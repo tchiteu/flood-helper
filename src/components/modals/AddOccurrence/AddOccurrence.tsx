@@ -102,7 +102,7 @@ export class AddOccurrence extends Component<MyProps, MyState> {
       <Modalize
         ref={(ref: ModalizeRef) => {this.modalizeRef = ref}}
         scrollViewProps={{ showsVerticalScrollIndicator: false }}
-        modalHeight={240}
+        modalHeight={280}
       >
         <ModalContainer>
           <MyText size={18}>NOVA OCORRÊNCIA</MyText>
