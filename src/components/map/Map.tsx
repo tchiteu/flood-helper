@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native-paper';
 import MapView, { Heatmap, LatLng, Marker, Region, WeightedLatLng } from 'react-native-maps';
 import AddOccurrence from '../modals/AddOccurrence';
 import GetLocation from 'react-native-get-location';
 import { getOccurrences } from '../utils/ApiUtils';
 import { Occurrence, ModalizeRef } from '../utils/types';
 import pinImg from '../../../assets/images/pin.png';
-import iconHeatmap from '../../../assets/images/icon_heatmap.png';
+import MyText from '../utils/MyText';
 
-import { Main, Container } from './style';
+import { Main, Container, ReportButton } from './style';
 
 interface MapProps {
 
@@ -33,7 +32,7 @@ export default class Map extends Component<MapProps, MapState> {
 
   map: MapView | null;
   modalizeRef: ModalizeRef;
-  openAddModal: Function;
+  openAddModal: () => void;
 
   initialRegion: {
     latitude: -26.2659,
@@ -165,9 +164,11 @@ export default class Map extends Component<MapProps, MapState> {
             onSuccess={this.drawLayers}
           />
 
-          <Button onPress={() => {this.openAddModal()}}>
-            Reportar Ocorrência
-          </Button>
+          <ReportButton onPress={this.openAddModal}>
+            <MyText color={"#FFFF"} size={14}>
+              NOVA OCORRÊNCIA
+            </MyText>
+          </ReportButton>
         </Container>
       </Main>
     );
