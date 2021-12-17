@@ -6,6 +6,7 @@ interface MyInputProps {
 
 export const Container = styled.View`
   display: flex;
+  margin-bottom: 16px;
 `
 
 export const LabelSection = styled.View`
@@ -14,11 +15,14 @@ export const LabelSection = styled.View`
 `
 
 export const Input = styled.TextInput<MyInputProps>`
-  height: 28px;
-  border-radius: 4px;
-  border: solid 1px #6a737c;
-  padding: 0px 5px;
-  font-size: 12px;
+  height: 40px;
+  border-radius: 8px;
+  border: solid 1px #E8E8E8;
+  background-color: #F6F6F6;
+  padding: 0px 10px;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
 
   ${props => props.width && `
     width: ${props.width}px;

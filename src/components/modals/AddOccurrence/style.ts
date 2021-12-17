@@ -27,8 +27,7 @@ export const LatLngSection = styled.View`
 `
 
 export const MyButton = styled.Button`
-  width: 10px;
-  border-radius: 4px;
+  border-radius: 8px;
 `
 
 export const ButtonSection = styled.View`
